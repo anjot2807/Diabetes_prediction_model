@@ -42,37 +42,45 @@ Description: Value of 1 indicates the presence of diabetes, and 0 indicates its 
 
 
 Model Performance:
-Logistic regression:
-Accuracy: 95.97%
-Macro Precision: 92.71%
-Macro Recall: 80.33%
-Macro F1 Score: 85.24%
+Logistic Regression:
 
-Logistic regression with SMOTEENN:
-Accuracy: 95.93%
-Macro Precision: 95.90%
-Macro Recall: 95.95%
-Macro F1 Score: 95.92%
+Accuracy: 95.67%
+Macro Precision: 90.74%
+Macro Recall: 80.75%
+Macro F1 Score: 84.88%
+Comment: Logistic Regression performs well overall, with high accuracy and a balanced trade-off between precision and recall.
+
+Logistic Regression with SMOTEENN:
+
+Accuracy: 87.11%
+Macro Precision: 69.61%
+Macro Recall: 88.78%
+Macro F1 Score: 74.11%
+Comment: The model with SMOTEENN shows a decrease in accuracy but an improvement in recall, indicating better identification of positive instances, at the cost of precision.
 
 XGBoost:
-Accuracy: 93.51%
-Macro Precision: 78.78%
-Macro Recall: 87.10%
-Macro F1 Score: 82.22%
 
-KNN:
-Accuracy: 95.85%
-Macro Precision: 93.85%
-Macro Recall: 78.55%
-Macro F1 Score: 84.25%
+Accuracy: 91.67%
+Macro Precision: 75.37%
+Macro Recall: 89.79%
+Macro F1 Score: 80.27%
+Comment: XGBoost performs well, with a good balance between precision and recall, providing high accuracy.
 
-RandomForest:
-Accuracy: 96.67%
-Macro Precision: 96.32%
-Macro Recall: 82.15%
-Macro F1 Score: 87.69%
+K-Nearest Neighbors (KNN):
 
-Summary:
-The dataset consists of various patient attributes, including demographic information, medical history, and diabetes-related indicators. The goal is to predict the presence or absence of diabetes based on these features.
+Accuracy: 95.91%
+Macro Precision: 92.27%
+Macro Recall: 80.96%
+Macro F1 Score: 85.54%
+Comment: KNN achieves high accuracy with strong precision, but slightly lower recall compared to Logistic Regression.
 
-Five different models were trained and evaluated on the dataset. The RandomForest model achieved the highest accuracy (96.67%) and macro F1 score (87.69%) among the models, making it a promising candidate for predicting diabetes in this context. Further fine-tuning and exploration of feature importance could enhance model performance.
+Random Forest:
+
+Accuracy: 96.73%
+Macro Precision: 94.90%
+Macro Recall: 84.14%
+Macro F1 Score: 88.62%
+Comment: Random Forest outperforms other models with the highest accuracy and a good balance between precision and recall.
+
+Overall Recommendation:
+Based on the provided metrics, Random Forest appears to be the most effective model for predicting the diabetes dataset, as it achieves the highest accuracy and a balanced trade-off between precision and recall. Consideration should also be given to the specific goals and requirements of the application, as different models may be preferred depending on the emphasis on precision or recall.
